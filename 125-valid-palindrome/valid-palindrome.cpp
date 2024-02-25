@@ -14,10 +14,12 @@ public:
                 right--;
                 continue;
             }
-            
+
+            // if each char are not equal, is not palindrome. return false
             if(tolower(s[left]) != tolower(s[right])){
                 return false;
             }
+            // move left/right pointers
             left++;
             right--;
         }
