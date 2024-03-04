@@ -2,19 +2,14 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
         unordered_map<char, int> letters;
-        for(char c : s){
-            letters[c] += 1;
-        }
 
-        for(char c : t){
-            if(letters.find(c) != letters.end()) {
-                letters[c] -= 1;
-                if(letters.at(c) == 0)
-                    letters.erase(c);
-            } else return false;
-        }
+        string sorted_s = s;
+        string sorted_t =t;
 
-        if(!letters.empty()) return false;
-        else return true;
+        sort(sorted_s.begin(), sorted_s.end());
+        sort(sorted_t.begin(), sorted_t.end());
+
+        if(sorted_s == sorted_t) return true;
+        else return false;
     }
 };
