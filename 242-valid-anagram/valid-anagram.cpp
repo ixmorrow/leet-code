@@ -4,7 +4,7 @@ public:
         unordered_map<char, int> letters;
 
         string sorted_s = s;
-        string sorted_t =t;
+        string sorted_t = t;
 
         sort(sorted_s.begin(), sorted_s.end());
         sort(sorted_t.begin(), sorted_t.end());
